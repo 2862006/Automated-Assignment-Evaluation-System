@@ -1,0 +1,37 @@
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+
+.header {
+  border-bottom: 1px solid var(--border);
+  background: rgba(11,11,20,0.95);
+  backdrop-filter: blur(10px);
+  position: sticky; top: 0; z-index: 100;
+}
+.header-inner {
+  max-width: 1100px; margin: 0 auto;
+  padding: 16px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-icon { font-size: 22px; color: var(--accent); }
+.logo-text {
+  font-family: var(--mono);
+  font-size: 20px; font-weight: 700;
+  color: var(--text);
+}
+.logo-text em { color: var(--accent); font-style: normal; }
+
+.nav { display: flex; gap: 4px; }
+.nav-btn {
+  background: transparent; border: 1px solid transparent;
+  color: var(--muted); font-family: var(--sans); font-size: 14px;
+  padding: 8px 18px; border-radius: 8px; cursor: pointer;
+  transition: all 0.2s;
+}
+.nav-btn:hover { color: var(--text); border-color: var(--border); }
+.nav-btn.active {
+  color: var(--accent); border-color: var(--accent);
+  background: rgba(108,99,255,0.1);
+}
+
+.main { flex: 1; max-width: 1100px; margin: 0 auto; width: 100%; padding: 32px 24px; }
